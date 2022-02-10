@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	body::-webkit-scrollbar {
+		display: none;
+	}
+
+	.bg-texture {
+		background: linear-gradient(to right, rgba(22, 160, 133, 0.8), rgba(22, 160, 133, 0.8)),
+			url(../images/background.svg);
+	}
+
+	.bg-texture-dark {
+		background: linear-gradient(to right, rgba(0, 113, 88, 0.8), rgba(0, 113, 88, 0.8)), url(../images/background.svg);
+	}
+
+	.h-hero {
+		height: calc(100vh - 5.25rem);
+	}
+
+	.heading-underline {
+		position: relative;
+	}
+
+	.heading-underline::before {
+		content: "";
+		position: absolute;
+		width: 5rem;
+		height: 0.3rem;
+		background-color: #16a085;
+		border-radius: 0.3rem;
+		bottom: -1.15rem;
+		left: 50%;
+		transform: translate(-50%);
+	}
+
+	.heading-underline.theme::before {
+		background-color: #fff;
+	}
+
+	.link {
+		position: relative;
+	}
+
+	.link.selected {
+		color: #16a085;
+		transition: ease-in 0.2s;
+	}
+
+	.link::before {
+		content: "";
+		position: absolute;
+		width: 0;
+		height: 0.2rem;
+		border-radius: 0.2rem;
+		background-color: #16a085;
+		bottom: -0.2rem;
+		transition: ease-out 0.3s;
+	}
+
+	.link:hover::before {
+		width: 100%;
+	}
+
+	.menu {
+		width: 1.5rem;
+		height: 1rem;
+		position: relative;
+		cursor: pointer;
+	}
+
+	.menu > span::before {
+		content: "";
+		position: absolute;
+		width: 1.5rem;
+		height: 0.2rem;
+		border-radius: 0.2rem;
+		background-color: #333;
+		left: 0;
+		top: 0.4rem;
+		transition: ease-in-out 0.2s;
+	}
+
+	html.dark .menu > span::before {
+		background-color: #d4d4d4;
+	}
+
+	.menu > span:first-child::before {
+		top: 0rem;
+	}
+
+	.menu > span:last-child::before {
+		top: 0.75rem;
+	}
+
+	.menu.active > span:first-child::before {
+		top: 0.4rem;
+		transform: rotateZ(45deg);
+	}
+
+	.menu.active > span:nth-child(2)::before {
+		opacity: 0;
+	}
+
+	.menu.active > span:last-child::before {
+		top: 0.4rem;
+		transform: rotateZ(-45deg);
+	}
+
+	header.scrollbar::before {
+		content: "";
+		position: absolute;
+		width: var(--value);
+		height: 0.125rem;
+		background-color: #16a085;
+		left: 0;
+		bottom: 0;
+	}
+
+	input::placeholder,
+	textarea::placeholder {
+		color: #d4d4d4;
+	}
+}
