@@ -108,3 +108,98 @@ dark.onclick = () => {
 	darkMode()
 	localStorage.theme = "dark"
 }
+
+// Submit Form
+const api = "https://sheetdb.io/api/v1/k14oylrwb6t76"
+const form = document.querySelector("#form")
+const divList = form.querySelectorAll(".inputContainer")
+const inputList = form.querySelectorAll("input, textarea")
+const submitButton = form.querySelector("#submit")
+const toastMessage = form.querySelector("#toastMessage")
+let isCheck = false
+
+const validateString = (string) => {
+	return string.trim() !== ""
+}
+
+const validateEmail = (email) => {
+	const regex =
+		/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+	return regex.test(email)
+}
+
+const validate = (element, type = "string") => {
+	let isValid = false
+	if (isCheck) {
+		const p = element.nextElementSibling
+		if (validateString(element.value)) {
+			if (type === "email") {
+				if (validateEmail(element.value)) {
+					p.classList.add("hidden")
+					isValid = true
+				} else {
+					p.innerText = "Please enter a valid email address!"
+					p.classList.remove("hidden")
+				}
+			} else {
+				p.classList.add("hidden")
+				isValid = true
+			}
+		} else {
+			p.innerText = "Please fill out this field!"
+			p.classList.remove("hidden")
+		}
+	}
+	return isValid
+}
+
+submitButton.onclick = () => {
+	if (submitButton.innerText === "SUBMIT") {
+		isCheck = true
+		let isSubmit = true
+
+		inputList.forEach((input) => {
+			let isValid = validate(input, input.type)
+			isSubmit = isSubmit && isValid
+		})
+
+		if (isSubmit) {
+			let data = new FormData()
+			data.append("NAME", inputList[0].value.trim())
+			data.append("EMAIL", inputList[1].value.trim())
+			data.append("MESSAGE", inputList[2].value.trim())
+			submitButton.innerText = "Sending..."
+			fetch(api, {
+				method: "POST",
+				body: data,
+			}).then(() => {
+				divList.forEach((div) => {
+					div.classList.add("hidden")
+				})
+				inputList[2].value = ""
+				toastMessage.classList.remove("hidden")
+				submitButton.innerText = "Submit again"
+			})
+		} else {
+			for (input of inputList) {
+				if (!validate(input, input.type)) {
+					input.focus()
+					break
+				}
+			}
+		}
+	} else {
+		divList.forEach((div) => {
+			div.classList.remove("hidden")
+		})
+		toastMessage.classList.add("hidden")
+		submitButton.innerText = "Submit"
+		inputList[2].focus()
+	}
+}
+
+inputList.forEach((input) => {
+	input.oninput = () => {
+		validate(input, input.type)
+	}
+})

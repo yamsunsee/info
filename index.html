@@ -82,7 +82,7 @@
 				The Hien
 			</h1>
 			<q class="text-lightGray max-w-4xl text-base md:text-xl">
-				<i>The success and glory of others is not stuff to envy, which is the motivation to strive!</i>
+				<i>There is nothing to envy the success and glory of others, which is the motivation to strive!</i>
 			</q>
 			<a
 				href="#projects"
@@ -318,53 +318,74 @@
 
 		<section
 			id="contact"
-			class="bg-texture dark:bg-texture-dark flex scroll-mt-20 flex-col items-center px-4 py-20 text-white transition duration-300 ease-out md:px-12"
+			class="bg-texture dark:bg-texture-dark flex scroll-mt-20 flex-col items-center px-4 py-20 transition duration-300 ease-out md:px-12"
 		>
 			<div class="flex flex-col items-center text-center">
-				<h2 class="heading-underline theme text-3xl font-black uppercase tracking-widest text-white md:text-4xl">
+				<h2
+					class="heading-underline theme text-3xl font-black uppercase tracking-widest text-white dark:text-neutral-200 md:text-4xl"
+				>
 					Contact
 				</h2>
-				<i class="text-lightGray mt-8 block max-w-4xl text-base md:text-xl">Please feel free to contact me!</i>
+				<i class="text-lightGray mt-8 block max-w-4xl text-base dark:text-neutral-300 md:text-xl"
+					>Please feel free to contact me!</i
+				>
 			</div>
-			<form
-				class="mt-20 flex w-full flex-col gap-8 rounded bg-white p-4 transition duration-300 ease-out dark:bg-neutral-800 md:w-3/4 md:p-12"
+			<div
+				id="form"
+				class="mt-20 flex w-full flex-col gap-4 rounded bg-white p-4 transition duration-300 ease-out dark:bg-neutral-800 sm:gap-8 sm:p-8 md:w-3/4 lg:p-12"
 			>
-				<div class="flex flex-col">
-					<label for="name" class="text-gray font-bold tracking-widest">Name</label>
+				<div class="inputContainer flex flex-col">
+					<label for="name" class="text-gray font-bold tracking-widest">
+						Name
+						<span class="text-lightRed">*</span></label
+					>
 					<input
 						type="text"
 						id="name"
 						placeholder="Enter Your Name"
 						class="bg-lightGray text-darkGray mt-2 rounded p-4 outline-none dark:bg-neutral-600 dark:text-neutral-300"
-						required
 					/>
+					<p class="text-lightRed mt-2 hidden text-xs font-bold tracking-widest">Please fill out this field!</p>
 				</div>
-				<div class="flex flex-col">
-					<label for="email" class="text-gray font-bold tracking-widest">Email</label>
+				<div class="inputContainer flex flex-col">
+					<label for="email" class="text-gray font-bold tracking-widest">
+						Email
+						<span class="text-lightRed">*</span></label
+					>
 					<input
-						type="text"
+						type="email"
 						id="email"
 						placeholder="Enter Your Email"
 						class="bg-lightGray text-darkGray mt-2 rounded p-4 outline-none dark:bg-neutral-600 dark:text-neutral-300"
-						required
 					/>
+					<p class="text-lightRed mt-2 hidden text-xs font-bold tracking-widest">Please fill out this field!</p>
 				</div>
-				<div class="flex flex-col">
-					<label for="message" class="text-gray font-bold tracking-widest">Message</label>
+				<div class="inputContainer flex flex-col">
+					<label for="message" class="text-gray font-bold tracking-widest">
+						Message
+						<span class="text-lightRed">*</span></label
+					>
 					<textarea
 						id="message"
 						placeholder="Enter Your Message"
 						class="bg-lightGray text-darkGray mt-2 resize-none rounded p-4 outline-none dark:bg-neutral-600 dark:text-neutral-300"
 						rows="10"
-						required
 					></textarea>
+					<p class="text-lightRed mt-2 hidden text-xs font-bold tracking-widest">Please fill out this field!</p>
 				</div>
-				<input
-					type="submit"
-					value="submit"
-					class="bg-theme dark:bg-themeDark w-full cursor-pointer self-end rounded px-12 py-4 text-center font-black uppercase tracking-widest text-white hover:shadow-2xl dark:text-neutral-300 md:w-fit"
-				/>
-			</form>
+				<div
+					id="toastMessage"
+					class="text-gray hidden text-center font-bold tracking-widest dark:text-neutral-300 md:text-left"
+				>
+					Your message has been submitted successfully!
+				</div>
+				<button
+					id="submit"
+					class="bg-theme dark:bg-themeDark w-full self-end rounded px-12 py-4 text-center font-black uppercase tracking-widest text-white hover:shadow-2xl dark:text-neutral-300 md:w-fit"
+				>
+					submit
+				</button>
+			</div>
 		</section>
 
 		<footer

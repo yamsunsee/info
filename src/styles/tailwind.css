@@ -40,6 +40,14 @@
 		background-color: #fff;
 	}
 
+	html.dark .heading-underline::before {
+		background-color: #007158;
+	}
+
+	html.dark .heading-underline.theme::before {
+		background-color: #e5e5e5;
+	}
+
 	.link {
 		position: relative;
 	}
@@ -117,6 +125,10 @@
 		background-color: #16a085;
 		left: 0;
 		bottom: 0;
+	}
+
+	html.dark header.scrollbar::before {
+		background-color: #007158;
 	}
 
 	input::placeholder,
