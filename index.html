@@ -1,418 +1,458 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="shortcut icon" href="./src/images/avatar.png" type="image/x-icon" />
-		<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-		<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;700;900&display=swap"
-			rel="stylesheet"
-		/>
-		<link rel="stylesheet" href="./src/styles/main.min.css" />
-		<title>The Hien</title>
-	</head>
-	<body
-		class="font-main text-darkGray select-none transition duration-300 ease-out dark:bg-neutral-900 dark:text-neutral-300"
-	>
-		<header
-			style="--value: 0%"
-			class="scrollbar sticky top-0 z-10 flex items-center justify-between bg-white px-4 py-4 font-black shadow dark:bg-neutral-900 md:px-12"
-		>
-			<a href="https://yamsunsee.github.io/info" class="group flex items-center gap-4">
-				<div class="aspect-square w-12">
-					<img src="./src/images/avatar.png" alt="avatar" />
-				</div>
-				<div class="group-hover:text-theme text-lg uppercase tracking-widest transition duration-300 ease-out">
-					The Hien
-				</div>
-			</a>
-			<div class="menu mb-[0.2rem] md:hidden">
-				<span></span>
-				<span></span>
-				<span></span>
-			</div>
-			<nav
-				class="fixed top-[5.25rem] left-0 right-0 translate-x-full transform bg-gradient-to-r from-slate-100/50 to-slate-100 shadow-2xl dark:from-neutral-800/50 dark:to-neutral-800 md:relative md:top-0 md:block md:translate-x-0 md:bg-none"
-			>
-				<ul
-					class="flex flex-col items-end gap-8 px-4 text-sm uppercase tracking-widest md:flex-row md:items-center md:gap-12 md:px-0 lg:gap-20"
-				>
-					<li class="link selected order-2 mt-2 md:order-1 md:mt-0">
-						<a href="#">Home</a>
-					</li>
-					<li class="link order-2 md:order-1">
-						<a href="#about">About</a>
-					</li>
-					<li class="link order-2 md:order-1">
-						<a href="#projects">Projects</a>
-					</li>
-					<li class="link order-2 mb-8 md:order-1 md:mb-0">
-						<a href="#contact">Contact</a>
-					</li>
-					<li class="relative order-1 mt-12 -translate-x-2 transform md:order-2 md:mt-0">
-						<ion-icon
-							name="sunny"
-							id="light"
-							class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[150%] transform text-xl opacity-0 transition duration-300 ease-out"
-						></ion-icon>
-						<ion-icon
-							name="moon"
-							id="dark"
-							class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transform cursor-pointer text-xl transition duration-300 ease-out"
-						></ion-icon>
-					</li>
-				</ul>
-			</nav>
-		</header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./src/images/avatar.png" type="image/x-icon" />
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/styles/main.min.css" />
+    <title>The Hien</title>
+  </head>
+  <body
+    class="font-main text-darkGray select-none transition duration-300 ease-out dark:bg-neutral-900 dark:text-neutral-300"
+  >
+    <header
+      style="--value: 0%"
+      class="scrollbar sticky top-0 z-10 flex items-center justify-between bg-white px-4 py-4 font-black shadow dark:bg-neutral-900 md:px-12"
+    >
+      <a href="https://yamsunsee.github.io/info" class="group flex items-center gap-4">
+        <div class="aspect-square w-12">
+          <img src="./src/images/avatar.png" alt="avatar" />
+        </div>
+        <div class="group-hover:text-theme text-lg uppercase tracking-widest transition duration-300 ease-out">
+          The Hien
+        </div>
+      </a>
+      <div class="menu mb-[0.2rem] md:hidden">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav
+        class="fixed top-[5.25rem] left-0 right-0 translate-x-full transform bg-gradient-to-r from-slate-100/50 to-slate-100 shadow-2xl dark:from-neutral-800/50 dark:to-neutral-800 md:relative md:top-0 md:block md:translate-x-0 md:bg-none"
+      >
+        <ul
+          class="flex flex-col items-end gap-8 px-4 text-sm uppercase tracking-widest md:flex-row md:items-center md:gap-12 md:px-0 lg:gap-20"
+        >
+          <li class="link selected order-2 mt-2 md:order-1 md:mt-0">
+            <a href="#">Home</a>
+          </li>
+          <li class="link order-2 md:order-1">
+            <a href="#about">About</a>
+          </li>
+          <li class="link order-2 md:order-1">
+            <a href="#projects">Projects</a>
+          </li>
+          <li class="link order-2 mb-8 md:order-1 md:mb-0">
+            <a href="#contact">Contact</a>
+          </li>
+          <li class="relative order-1 mt-12 -translate-x-2 transform md:order-2 md:mt-0">
+            <ion-icon
+              name="sunny"
+              id="light"
+              class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[150%] transform text-xl opacity-0 transition duration-300 ease-out"
+            ></ion-icon>
+            <ion-icon
+              name="moon"
+              id="dark"
+              class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transform cursor-pointer text-xl transition duration-300 ease-out"
+            ></ion-icon>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-		<section
-			id="home"
-			class="bg-texture dark:bg-texture-dark h-hero flex flex-col items-center justify-center gap-8 p-4 text-center text-white"
-		>
-			<h1 class="text-4xl font-black uppercase leading-tight tracking-widest md:text-5xl xl:text-6xl">
-				Hello,
-				<br class="sm:hidden" />
-				my name is
-				<br class="lg:hidden" />
-				The Hien
-			</h1>
-			<q class="text-lightGray max-w-4xl text-base md:text-xl">
-				<i>
-					Like a spider, I strive to be a good web developer.
-					<br class="lg:hidden" />
-					But I do not like bugs much!
-				</i>
-			</q>
-			<a
-				href="#projects"
-				title="Let's see what I can do!"
-				class="text-darkGray rounded bg-white px-12 py-4 font-black uppercase tracking-widest hover:shadow-2xl"
-				>My recent works</a
-			>
-		</section>
+    <section
+      id="home"
+      class="bg-texture dark:bg-texture-dark h-hero relative flex flex-col items-center justify-center gap-8 p-4 text-center text-white"
+    >
+      <h1 class="text-shadow text-4xl font-black uppercase leading-tight tracking-widest md:text-5xl xl:text-6xl">
+        Hello,
+        <br class="sm:hidden" />
+        my name is
+        <br class="lg:hidden" />
+        The Hien
+      </h1>
+      <q class="text-shadow text-lightGray max-w-4xl text-base md:text-xl">
+        <i>
+          Like a spider, I strive to be a good web developer.
+          <br class="lg:hidden" />
+          But I do not like bugs much!
+        </i>
+      </q>
+      <a
+        href="#projects"
+        title="Let's see what I can do!"
+        class="text-darkGray rounded bg-white px-12 py-4 font-black uppercase tracking-widest hover:shadow-2xl"
+        >My recent works</a
+      >
+    </section>
 
-		<section
-			id="about"
-			class="flex scroll-mt-20 flex-col items-center justify-center bg-slate-100 px-4 py-20 transition duration-300 ease-out dark:bg-neutral-800 md:px-12"
-		>
-			<div class="text-center">
-				<h2 class="heading-underline text-3xl font-black uppercase tracking-widest md:text-4xl">About me</h2>
-				<i class="text-gray mt-8 block max-w-4xl text-base md:text-xl"
-					>I love coding and doing some fascinating stuff!</i
-				>
-			</div>
-			<div class="mt-20 grid grid-cols-1 gap-20 lg:grid-cols-2">
-				<div>
-					<h3 class="text-2xl font-bold">Get to know me!</h3>
-					<p class="mt-8">
-						I am a <strong>self-taught front-end developer </strong> with experience
-						<strong>converting designs</strong> (PSD, AI, Figma,...) to HTML, CSS, and JavaScript.
-					</p>
-					<p class="mt-4">
-						Besides, I have experience in <strong>VueJS</strong> with some libraries such as
-						<strong>Vuex, Vue Router</strong>.
-					</p>
-					<a
-						href="#contact"
-						title="Please feel free to contact me!"
-						class="bg-theme dark:bg-themeDark mt-8 block rounded px-12 py-4 text-center font-black uppercase tracking-widest text-white hover:shadow-2xl dark:text-neutral-300 md:w-fit"
-					>
-						Contact
-					</a>
-				</div>
-				<div>
-					<h3 class="text-2xl font-bold">My skills</h3>
-					<div class="text-gray mt-8 flex flex-wrap gap-4 font-bold">
-						<div class="flex h-12 w-fit items-center gap-2 rounded bg-white p-4 dark:bg-neutral-200">
-							<ion-icon name="logo-html5" class="text-red text-2xl"></ion-icon>
-							HTML
-						</div>
-						<div class="flex h-12 w-fit items-center gap-2 rounded bg-white p-4 dark:bg-neutral-200">
-							<img src="./src/images/pug.svg" alt="pug" class="w-6" />
-							Pug
-						</div>
-						<div class="flex h-12 w-fit items-center gap-2 rounded bg-white p-4 dark:bg-neutral-200">
-							<ion-icon name="logo-css3" class="text-blue text-2xl"></ion-icon>
-							CSS
-						</div>
-						<div class="flex h-12 w-fit items-center gap-2 rounded bg-white p-4 dark:bg-neutral-200">
-							<ion-icon name="logo-sass" class="text-purple text-2xl"></ion-icon>
-							Sass
-						</div>
-						<div class="flex h-12 w-fit items-center gap-2 rounded bg-white p-4 dark:bg-neutral-200">
-							<img src="./src/images/tailwind.svg" alt="tailwindcss" class="w-6" />
-							TailwindCSS
-						</div>
-						<div class="flex h-12 w-fit items-center gap-2 rounded bg-white p-4 dark:bg-neutral-200">
-							<ion-icon name="logo-javascript" class="text-yellow text-2xl"></ion-icon>
-							JavaScript
-						</div>
-						<div class="flex h-12 w-fit items-center gap-2 rounded bg-white p-4 dark:bg-neutral-200">
-							<img src="./src/images/vue.svg" alt="vuejs" class="w-6" />
-							VueJS
-						</div>
-						<div class="flex h-12 w-fit items-center gap-2 rounded bg-white p-4 dark:bg-neutral-200">
-							<img src="./src/images/python.svg" alt="python" class="w-6" />
-							Python
-						</div>
-						<div class="flex h-12 w-fit items-center gap-2 rounded bg-white p-4 dark:bg-neutral-200">
-							<img src="./src/images/git.svg" alt="git" class="w-6" />
-							Git
-						</div>
-						<div class="flex h-12 w-fit items-center gap-2 rounded bg-white p-4 dark:bg-neutral-200">
-							<ion-icon name="logo-github" class="w-6 text-2xl text-black"></ion-icon>
-							Github
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+    <section
+      id="about"
+      class="flex scroll-mt-20 flex-col items-center justify-center bg-slate-100 px-4 py-20 transition duration-300 ease-out dark:bg-neutral-800 md:px-12"
+    >
+      <div class="text-center">
+        <h2 class="heading-underline text-3xl font-black uppercase tracking-widest md:text-4xl">About me</h2>
+        <i class="text-gray mt-8 block max-w-4xl text-base md:text-xl"
+          >I love coding and doing some fascinating stuff!</i
+        >
+      </div>
+      <div class="mt-20 grid grid-cols-1 gap-20 lg:grid-cols-2">
+        <div>
+          <h3 class="text-2xl font-bold">Get to know me!</h3>
+          <p class="mt-8">
+            I am a <strong>self-taught front-end developer </strong> with experience
+            <strong>converting designs</strong> (PSD, AI, Figma,...) to HTML, CSS, and JavaScript.
+          </p>
+          <p class="mt-4">
+            Besides, I have experience in <strong>VueJS</strong> with some libraries such as
+            <strong>Vuex, Vue Router</strong>.
+          </p>
+          <a
+            href="#contact"
+            title="Please feel free to contact me!"
+            class="bg-theme dark:bg-themeDark mt-8 block rounded px-12 py-4 text-center font-black uppercase tracking-widest text-white hover:shadow-2xl dark:text-neutral-300 md:w-fit"
+          >
+            Contact
+          </a>
+        </div>
+        <div>
+          <h3 class="text-2xl font-bold">My skills</h3>
+          <div class="text-gray mt-8 flex flex-wrap gap-4 font-bold">
+            <div class="flex h-12 w-fit items-center gap-2 rounded bg-white p-4 dark:bg-neutral-200">
+              <ion-icon name="logo-html5" class="text-red text-2xl"></ion-icon>
+              HTML
+            </div>
+            <div class="flex h-12 w-fit items-center gap-2 rounded bg-white p-4 dark:bg-neutral-200">
+              <img src="./src/images/pug.svg" alt="pug" class="w-6" />
+              Pug
+            </div>
+            <div class="flex h-12 w-fit items-center gap-2 rounded bg-white p-4 dark:bg-neutral-200">
+              <ion-icon name="logo-css3" class="text-blue text-2xl"></ion-icon>
+              CSS
+            </div>
+            <div class="flex h-12 w-fit items-center gap-2 rounded bg-white p-4 dark:bg-neutral-200">
+              <ion-icon name="logo-sass" class="text-purple text-2xl"></ion-icon>
+              Sass
+            </div>
+            <div class="flex h-12 w-fit items-center gap-2 rounded bg-white p-4 dark:bg-neutral-200">
+              <img src="./src/images/tailwind.svg" alt="tailwindcss" class="w-6" />
+              TailwindCSS
+            </div>
+            <div class="flex h-12 w-fit items-center gap-2 rounded bg-white p-4 dark:bg-neutral-200">
+              <ion-icon name="logo-javascript" class="text-yellow text-2xl"></ion-icon>
+              JavaScript
+            </div>
+            <div class="flex h-12 w-fit items-center gap-2 rounded bg-white p-4 dark:bg-neutral-200">
+              <img src="./src/images/vue.svg" alt="vuejs" class="w-6" />
+              VueJS
+            </div>
+            <div class="flex h-12 w-fit items-center gap-2 rounded bg-white p-4 dark:bg-neutral-200">
+              <ion-icon name="logo-react" class="text-lightBlue text-2xl"></ion-icon>
+              ReactJS
+            </div>
+            <div class="flex h-12 w-fit items-center gap-2 rounded bg-white p-4 dark:bg-neutral-200">
+              <img src="./src/images/python.svg" alt="python" class="w-6" />
+              Python
+            </div>
+            <div class="flex h-12 w-fit items-center gap-2 rounded bg-white p-4 dark:bg-neutral-200">
+              <img src="./src/images/git.svg" alt="git" class="w-6" />
+              Git
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-		<section id="projects" class="my-20 flex scroll-mt-32 flex-col items-center justify-center px-4 md:px-12">
-			<div class="text-center">
-				<h2 class="heading-underline text-3xl font-black uppercase tracking-widest md:text-4xl">Projects</h2>
-				<i class="text-gray mt-8 block max-w-4xl text-base md:text-xl">Let's see some projects I did!</i>
-			</div>
-			<div class="mt-20 flex flex-col gap-20">
-				<div class="grid grid-cols-1 items-center gap-2 md:grid-cols-2 md:gap-20">
-					<div>
-						<img src="https://source.unsplash.com/random/800x400" alt="project review" />
-					</div>
-					<div>
-						<h3 class="flex flex-col text-2xl font-bold uppercase md:flex-row md:items-center md:justify-between">
-							<div class="order-2 md:order-1">Yamonus</div>
-							<div class="order-1 mb-4 flex items-center gap-2 self-end md:order-2 md:mb-0 md:self-center">
-								<img src="./src/images/vue.svg" alt="vue" class="inline-flex w-6" />
-								<ion-icon name="logo-sass" class="text-purple text-2xl"></ion-icon>
-							</div>
-						</h3>
-						<div class="text-gray text-xs font-bold uppercase tracking-widest">Personal project</div>
-						<p class="mt-8">
-							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo quasi iste sit. Aliquam porro aut ducimus,
-							corrupti consectetur nulla? Explicabo labore quidem quo, consectetur exercitationem qui ab aliquid vel
-							earum!
-						</p>
-						<a
-							class="bg-theme dark:bg-themeDark mt-8 block rounded px-12 py-4 text-center font-black uppercase tracking-widest text-white hover:shadow-2xl dark:text-neutral-300 md:w-fit"
-							href="https://yamsunsee.github.io/yamonus"
-							target="_blank"
-						>
-							View demo
-						</a>
-					</div>
-				</div>
-				<div class="grid grid-cols-1 items-center gap-2 md:grid-cols-2 md:gap-20">
-					<div class="md:order-2">
-						<img src="https://source.unsplash.com/random/800x400" alt="project review" />
-					</div>
-					<div class="md:order-1">
-						<h3 class="flex flex-col text-2xl font-bold uppercase md:flex-row md:items-center md:justify-between">
-							<div class="order-2 md:order-1">Covid tracker</div>
-							<div class="order-1 mb-4 flex items-center gap-2 self-end md:order-2 md:mb-0 md:self-center">
-								<img src="./src/images/vue.svg" alt="vue" class="inline-flex w-6" />
-								<img src="./src/images/tailwind.svg" alt="tailwindcss" class="inline-flex w-6" />
-							</div>
-						</h3>
-						<div class="text-gray text-xs font-bold uppercase tracking-widest">Personal project</div>
-						<p class="mt-8">
-							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo quasi iste sit. Aliquam porro aut ducimus,
-							corrupti consectetur nulla? Explicabo labore quidem quo, consectetur exercitationem qui ab aliquid vel
-							earum!
-						</p>
-						<a
-							class="bg-theme dark:bg-themeDark mt-8 block rounded px-12 py-4 text-center font-black uppercase tracking-widest text-white hover:shadow-2xl dark:text-neutral-300 md:w-fit"
-							href="https://yamsunsee.github.io/covidtracker/"
-							target="_blank"
-						>
-							View demo
-						</a>
-					</div>
-				</div>
-				<div class="grid grid-cols-1 items-center gap-2 md:grid-cols-2 md:gap-20">
-					<div>
-						<img src="https://source.unsplash.com/random/800x400" alt="project review" />
-					</div>
-					<div>
-						<h3 class="flex flex-col text-2xl font-bold uppercase md:flex-row md:items-center md:justify-between">
-							<div class="order-2 md:order-1">Blocks</div>
-							<div class="order-1 mb-4 flex items-center gap-2 self-end md:order-2 md:mb-0 md:self-center">
-								<ion-icon name="logo-html5" class="text-red text-2xl"></ion-icon>
-								<ion-icon name="logo-sass" class="text-purple text-2xl"></ion-icon>
-								<ion-icon name="logo-javascript" class="text-yellow text-2xl"></ion-icon>
-							</div>
-						</h3>
-						<div class="text-gray text-xs font-bold uppercase tracking-widest">Game</div>
-						<p class="mt-8">
-							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo quasi iste sit. Aliquam porro aut ducimus,
-							corrupti consectetur nulla? Explicabo labore quidem quo, consectetur exercitationem qui ab aliquid vel
-							earum!
-						</p>
-						<a
-							class="bg-theme dark:bg-themeDark mt-8 block rounded px-12 py-4 text-center font-black uppercase tracking-widest text-white hover:shadow-2xl dark:text-neutral-300 md:w-fit"
-							href="https://yamsunsee.github.io/Blocks/"
-							target="_blank"
-						>
-							Play now
-						</a>
-					</div>
-				</div>
-				<div class="grid grid-cols-1 items-center gap-2 md:grid-cols-2 md:gap-20">
-					<div class="md:order-2">
-						<img src="https://source.unsplash.com/random/800x400" alt="project review" />
-					</div>
-					<div class="md:order-1">
-						<h3 class="flex flex-col text-2xl font-bold uppercase md:flex-row md:items-center md:justify-between">
-							<div class="order-2 md:order-1">Midbank</div>
-							<div class="order-1 mb-4 flex items-center gap-2 self-end md:order-2 md:mb-0 md:self-center">
-								<ion-icon name="logo-html5" class="text-red text-2xl"></ion-icon>
-								<img src="./src/images/tailwind.svg" alt="tailwindcss" class="inline-flex w-6" />
-								<ion-icon name="logo-javascript" class="text-yellow text-2xl"></ion-icon>
-							</div>
-						</h3>
-						<div class="text-gray text-xs font-bold uppercase tracking-widest">Landing page</div>
-						<p class="mt-8">
-							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo quasi iste sit. Aliquam porro aut ducimus,
-							corrupti consectetur nulla? Explicabo labore quidem quo, consectetur exercitationem qui ab aliquid vel
-							earum!
-						</p>
-						<a
-							class="bg-theme dark:bg-themeDark mt-8 block rounded px-12 py-4 text-center font-black uppercase tracking-widest text-white hover:shadow-2xl dark:text-neutral-300 md:w-fit"
-							href="https://yamsunsee.github.io/Midbank/"
-							target="_blank"
-						>
-							View demo
-						</a>
-					</div>
-				</div>
-				<div class="grid grid-cols-1 items-center gap-2 md:grid-cols-2 md:gap-20">
-					<div>
-						<img src="https://source.unsplash.com/random/800x400" alt="project review" />
-					</div>
-					<div>
-						<h3 class="flex flex-col text-2xl font-bold uppercase md:flex-row md:items-center md:justify-between">
-							<div class="order-2 md:order-1">Food Delivery</div>
-							<div class="order-1 mb-4 flex items-center gap-2 self-end md:order-2 md:mb-0 md:self-center">
-								<img src="./src/images/pug.svg" alt="pug" class="inline-flex w-6" />
-								<ion-icon name="logo-sass" class="text-purple text-2xl"></ion-icon>
-								<ion-icon name="logo-javascript" class="text-yellow text-2xl"></ion-icon>
-							</div>
-						</h3>
-						<div class="text-gray text-xs font-bold uppercase tracking-widest">Landing page</div>
-						<p class="mt-8">
-							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo quasi iste sit. Aliquam porro aut ducimus,
-							corrupti consectetur nulla? Explicabo labore quidem quo, consectetur exercitationem qui ab aliquid vel
-							earum!
-						</p>
-						<a
-							class="bg-theme dark:bg-themeDark mt-8 block rounded px-12 py-4 text-center font-black uppercase tracking-widest text-white hover:shadow-2xl dark:text-neutral-300 md:w-fit"
-							href="https://yamsunsee.github.io/FoodDelivery/"
-							target="_blank"
-						>
-							View demo
-						</a>
-					</div>
-				</div>
-			</div>
-		</section>
+    <section id="projects" class="my-20 flex scroll-mt-32 flex-col items-center justify-center px-4 md:px-12">
+      <div class="text-center">
+        <h2 class="heading-underline text-3xl font-black uppercase tracking-widest md:text-4xl">Projects</h2>
+        <i class="text-gray mt-8 block max-w-4xl text-base md:text-xl">Let's see some projects I did!</i>
+      </div>
+      <div class="mt-20 flex flex-col gap-20">
+        <div class="grid grid-cols-1 items-center gap-2 md:grid-cols-2 md:gap-20">
+          <div class="md:order-2">
+            <img src="https://source.unsplash.com/random/800x400" alt="project review" />
+          </div>
+          <div class="md:order-1">
+            <h3 class="flex flex-col text-2xl font-bold uppercase md:flex-row md:items-center md:justify-between">
+              <div class="order-2 md:order-1">Yamonus</div>
+              <div class="order-1 mb-4 flex items-center gap-2 self-end md:order-2 md:mb-0 md:self-center">
+                <img src="./src/images/vue.svg" alt="vue" class="inline-flex w-6" />
+                <ion-icon name="logo-sass" class="text-purple text-2xl"></ion-icon>
+              </div>
+            </h3>
+            <div class="text-gray text-xs font-bold uppercase tracking-widest">Personal project</div>
+            <p class="mt-8">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo quasi iste sit. Aliquam porro aut ducimus,
+              corrupti consectetur nulla? Explicabo labore quidem quo, consectetur exercitationem qui ab aliquid vel
+              earum!
+            </p>
+            <a
+              class="bg-theme dark:bg-themeDark mt-8 block rounded px-12 py-4 text-center font-black uppercase tracking-widest text-white hover:shadow-2xl dark:text-neutral-300 md:w-fit"
+              href="https://yamsunsee.github.io/yamonus"
+              target="_blank"
+            >
+              View demo
+            </a>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 items-center gap-2 md:grid-cols-2 md:gap-20">
+          <div>
+            <img src="https://source.unsplash.com/random/800x400" alt="project review" />
+          </div>
+          <div>
+            <h3 class="flex flex-col text-2xl font-bold uppercase md:flex-row md:items-center md:justify-between">
+              <div class="order-2 md:order-1">Yamemorize</div>
+              <div class="order-1 mb-4 flex items-center gap-2 self-end md:order-2 md:mb-0 md:self-center">
+                <ion-icon name="logo-react" class="text-lightBlue text-2xl"></ion-icon>
+                <img src="./src/images/tailwind.svg" alt="tailwindcss" class="inline-flex w-6" />
+              </div>
+            </h3>
+            <div class="text-gray text-xs font-bold uppercase tracking-widest">Personal project</div>
+            <p class="mt-8">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo quasi iste sit. Aliquam porro aut ducimus,
+              corrupti consectetur nulla? Explicabo labore quidem quo, consectetur exercitationem qui ab aliquid vel
+              earum!
+            </p>
+            <a
+              class="bg-theme dark:bg-themeDark mt-8 block rounded px-12 py-4 text-center font-black uppercase tracking-widest text-white hover:shadow-2xl dark:text-neutral-300 md:w-fit"
+              href="https://yamsunsee.github.io/yamemorize"
+              target="_blank"
+            >
+              View demo
+            </a>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 items-center gap-2 md:grid-cols-2 md:gap-20">
+          <div class="md:order-2">
+            <img src="https://source.unsplash.com/random/800x400" alt="project review" />
+          </div>
+          <div class="md:order-1">
+            <h3 class="flex flex-col text-2xl font-bold uppercase md:flex-row md:items-center md:justify-between">
+              <div class="order-2 md:order-1">Covid tracker</div>
+              <div class="order-1 mb-4 flex items-center gap-2 self-end md:order-2 md:mb-0 md:self-center">
+                <img src="./src/images/vue.svg" alt="vue" class="inline-flex w-6" />
+                <img src="./src/images/tailwind.svg" alt="tailwindcss" class="inline-flex w-6" />
+              </div>
+            </h3>
+            <div class="text-gray text-xs font-bold uppercase tracking-widest">Personal project</div>
+            <p class="mt-8">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo quasi iste sit. Aliquam porro aut ducimus,
+              corrupti consectetur nulla? Explicabo labore quidem quo, consectetur exercitationem qui ab aliquid vel
+              earum!
+            </p>
+            <a
+              class="bg-theme dark:bg-themeDark mt-8 block rounded px-12 py-4 text-center font-black uppercase tracking-widest text-white hover:shadow-2xl dark:text-neutral-300 md:w-fit"
+              href="https://yamsunsee.github.io/covidtracker/"
+              target="_blank"
+            >
+              View demo
+            </a>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 items-center gap-2 md:grid-cols-2 md:gap-20">
+          <div>
+            <img src="https://source.unsplash.com/random/800x400" alt="project review" />
+          </div>
+          <div>
+            <h3 class="flex flex-col text-2xl font-bold uppercase md:flex-row md:items-center md:justify-between">
+              <div class="order-2 md:order-1">Blocks</div>
+              <div class="order-1 mb-4 flex items-center gap-2 self-end md:order-2 md:mb-0 md:self-center">
+                <ion-icon name="logo-html5" class="text-red text-2xl"></ion-icon>
+                <ion-icon name="logo-sass" class="text-purple text-2xl"></ion-icon>
+                <ion-icon name="logo-javascript" class="text-yellow text-2xl"></ion-icon>
+              </div>
+            </h3>
+            <div class="text-gray text-xs font-bold uppercase tracking-widest">Game</div>
+            <p class="mt-8">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo quasi iste sit. Aliquam porro aut ducimus,
+              corrupti consectetur nulla? Explicabo labore quidem quo, consectetur exercitationem qui ab aliquid vel
+              earum!
+            </p>
+            <a
+              class="bg-theme dark:bg-themeDark mt-8 block rounded px-12 py-4 text-center font-black uppercase tracking-widest text-white hover:shadow-2xl dark:text-neutral-300 md:w-fit"
+              href="https://yamsunsee.github.io/Blocks/"
+              target="_blank"
+            >
+              Play now
+            </a>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 items-center gap-2 md:grid-cols-2 md:gap-20">
+          <div class="md:order-2">
+            <img src="https://source.unsplash.com/random/800x400" alt="project review" />
+          </div>
+          <div class="md:order-1">
+            <h3 class="flex flex-col text-2xl font-bold uppercase md:flex-row md:items-center md:justify-between">
+              <div class="order-2 md:order-1">Midbank</div>
+              <div class="order-1 mb-4 flex items-center gap-2 self-end md:order-2 md:mb-0 md:self-center">
+                <ion-icon name="logo-html5" class="text-red text-2xl"></ion-icon>
+                <img src="./src/images/tailwind.svg" alt="tailwindcss" class="inline-flex w-6" />
+                <ion-icon name="logo-javascript" class="text-yellow text-2xl"></ion-icon>
+              </div>
+            </h3>
+            <div class="text-gray text-xs font-bold uppercase tracking-widest">Landing page</div>
+            <p class="mt-8">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo quasi iste sit. Aliquam porro aut ducimus,
+              corrupti consectetur nulla? Explicabo labore quidem quo, consectetur exercitationem qui ab aliquid vel
+              earum!
+            </p>
+            <a
+              class="bg-theme dark:bg-themeDark mt-8 block rounded px-12 py-4 text-center font-black uppercase tracking-widest text-white hover:shadow-2xl dark:text-neutral-300 md:w-fit"
+              href="https://yamsunsee.github.io/Midbank/"
+              target="_blank"
+            >
+              View demo
+            </a>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 items-center gap-2 md:grid-cols-2 md:gap-20">
+          <div>
+            <img src="https://source.unsplash.com/random/800x400" alt="project review" />
+          </div>
+          <div>
+            <h3 class="flex flex-col text-2xl font-bold uppercase md:flex-row md:items-center md:justify-between">
+              <div class="order-2 md:order-1">Food Delivery</div>
+              <div class="order-1 mb-4 flex items-center gap-2 self-end md:order-2 md:mb-0 md:self-center">
+                <img src="./src/images/pug.svg" alt="pug" class="inline-flex w-6" />
+                <ion-icon name="logo-sass" class="text-purple text-2xl"></ion-icon>
+                <ion-icon name="logo-javascript" class="text-yellow text-2xl"></ion-icon>
+              </div>
+            </h3>
+            <div class="text-gray text-xs font-bold uppercase tracking-widest">Landing page</div>
+            <p class="mt-8">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo quasi iste sit. Aliquam porro aut ducimus,
+              corrupti consectetur nulla? Explicabo labore quidem quo, consectetur exercitationem qui ab aliquid vel
+              earum!
+            </p>
+            <a
+              class="bg-theme dark:bg-themeDark mt-8 block rounded px-12 py-4 text-center font-black uppercase tracking-widest text-white hover:shadow-2xl dark:text-neutral-300 md:w-fit"
+              href="https://yamsunsee.github.io/FoodDelivery/"
+              target="_blank"
+            >
+              View demo
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-		<section
-			id="contact"
-			class="bg-texture dark:bg-texture-dark flex scroll-mt-20 flex-col items-center px-4 py-20 transition duration-300 ease-out md:px-12"
-		>
-			<div class="flex flex-col items-center text-center">
-				<h2
-					class="heading-underline theme text-3xl font-black uppercase tracking-widest text-white dark:text-neutral-200 md:text-4xl"
-				>
-					Contact
-				</h2>
-				<i class="text-lightGray mt-8 block max-w-4xl text-base dark:text-neutral-300 md:text-xl"
-					>Please feel free to contact me!</i
-				>
-			</div>
-			<div
-				id="form"
-				class="mt-20 flex w-full flex-col gap-4 rounded bg-white p-4 transition duration-300 ease-out dark:bg-neutral-800 sm:gap-8 sm:p-8 md:w-3/4 lg:p-12"
-			>
-				<div class="inputContainer flex flex-col">
-					<label for="name" class="text-gray font-bold tracking-widest">
-						Name
-						<span class="text-lightRed">*</span></label
-					>
-					<input
-						type="text"
-						id="name"
-						placeholder="Enter Your Name"
-						class="bg-lightGray text-darkGray mt-2 rounded p-4 outline-none dark:bg-neutral-600 dark:text-neutral-300"
-					/>
-					<p class="text-lightRed mt-2 hidden text-xs font-bold tracking-widest">Please fill out this field!</p>
-				</div>
-				<div class="inputContainer flex flex-col">
-					<label for="email" class="text-gray font-bold tracking-widest">
-						Email
-						<span class="text-lightRed">*</span></label
-					>
-					<input
-						type="email"
-						id="email"
-						placeholder="Enter Your Email"
-						class="bg-lightGray text-darkGray mt-2 rounded p-4 outline-none dark:bg-neutral-600 dark:text-neutral-300"
-					/>
-					<p class="text-lightRed mt-2 hidden text-xs font-bold tracking-widest">Please fill out this field!</p>
-				</div>
-				<div class="inputContainer flex flex-col">
-					<label for="message" class="text-gray font-bold tracking-widest">
-						Message
-						<span class="text-lightRed">*</span></label
-					>
-					<textarea
-						id="message"
-						placeholder="Enter Your Message"
-						class="bg-lightGray text-darkGray mt-2 resize-none rounded p-4 outline-none dark:bg-neutral-600 dark:text-neutral-300"
-						rows="10"
-					></textarea>
-					<p class="text-lightRed mt-2 hidden text-xs font-bold tracking-widest">Please fill out this field!</p>
-				</div>
-				<div
-					id="toastMessage"
-					class="text-gray hidden text-center font-bold tracking-widest dark:text-neutral-300 md:text-left"
-				>
-					Your message has been submitted successfully!
-				</div>
-				<button
-					id="submit"
-					class="bg-theme dark:bg-themeDark w-full self-end rounded px-12 py-4 text-center font-black uppercase tracking-widest text-white hover:shadow-2xl dark:text-neutral-300 md:w-fit"
-				>
-					submit
-				</button>
-			</div>
-		</section>
+    <section
+      id="contact"
+      class="bg-texture contact dark:bg-texture-dark flex scroll-mt-20 flex-col items-center px-4 py-20 transition duration-300 ease-out md:px-12"
+    >
+      <div class="flex flex-col items-center text-center">
+        <h2
+          class="heading-underline theme text-3xl font-black uppercase tracking-widest text-white dark:text-neutral-200 md:text-4xl"
+        >
+          Contact
+        </h2>
+        <i class="text-lightGray mt-8 block max-w-4xl text-base dark:text-neutral-300 md:text-xl"
+          >Please feel free to contact me!</i
+        >
+      </div>
+      <div
+        id="form"
+        class="mt-20 flex w-full flex-col gap-4 rounded bg-white p-4 transition duration-300 ease-out dark:bg-neutral-800 sm:gap-8 sm:p-8 md:w-3/4 lg:p-12"
+      >
+        <div class="inputContainer flex flex-col">
+          <label for="name" class="text-gray font-bold tracking-widest">
+            Name
+            <span class="text-lightRed">*</span></label
+          >
+          <input
+            type="text"
+            id="name"
+            placeholder="Enter Your Name"
+            class="bg-lightGray text-darkGray mt-2 rounded p-4 outline-none dark:bg-neutral-600 dark:text-neutral-300"
+          />
+          <p class="text-lightRed mt-2 hidden text-xs font-bold tracking-widest">Please fill out this field!</p>
+        </div>
+        <div class="inputContainer flex flex-col">
+          <label for="email" class="text-gray font-bold tracking-widest">
+            Email
+            <span class="text-lightRed">*</span></label
+          >
+          <input
+            type="email"
+            id="email"
+            placeholder="Enter Your Email"
+            class="bg-lightGray text-darkGray mt-2 rounded p-4 outline-none dark:bg-neutral-600 dark:text-neutral-300"
+          />
+          <p class="text-lightRed mt-2 hidden text-xs font-bold tracking-widest">Please fill out this field!</p>
+        </div>
+        <div class="inputContainer flex flex-col">
+          <label for="message" class="text-gray font-bold tracking-widest">
+            Message
+            <span class="text-lightRed">*</span></label
+          >
+          <textarea
+            id="message"
+            placeholder="Enter Your Message"
+            class="bg-lightGray text-darkGray mt-2 resize-none rounded p-4 outline-none dark:bg-neutral-600 dark:text-neutral-300"
+            rows="10"
+          ></textarea>
+          <p class="text-lightRed mt-2 hidden text-xs font-bold tracking-widest">Please fill out this field!</p>
+        </div>
+        <div
+          id="toastMessage"
+          class="text-gray hidden text-center font-bold tracking-widest dark:text-neutral-300 md:text-left"
+        >
+          Your message has been submitted successfully!
+        </div>
+        <button
+          id="submit"
+          class="bg-theme dark:bg-themeDark w-full self-end rounded px-12 py-4 text-center font-black uppercase tracking-widest text-white hover:shadow-2xl dark:text-neutral-300 md:w-fit"
+        >
+          submit
+        </button>
+      </div>
+    </section>
 
-		<footer
-			class="flex flex-col justify-between gap-8 bg-black px-4 py-20 text-white dark:text-neutral-300 md:flex-row md:gap-0 md:px-12"
-		>
-			<div class="flex flex-col">
-				<h4 class="text-xl font-black uppercase tracking-widest">The Hien</h4>
-				<q class="text-lightGray mt-4 block text-sm">
-					<i>Spiders are the only web developers that enjoy finding bugs!</i>
-				</q>
-			</div>
-			<div>
-				<h4 class="text-xl font-black uppercase tracking-widest">Social</h4>
-				<div class="mt-4 flex gap-2">
-					<a href="https://github.com/Yamsunsee" target="_blank">
-						<ion-icon name="logo-github" class="text-xl"></ion-icon>
-					</a>
-					<a href="https://www.facebook.com/phamthehien0410" target="_blank">
-						<ion-icon name="logo-facebook" class="text-xl"></ion-icon>
-					</a>
-				</div>
-			</div>
-		</footer>
-		<script src="./src/scripts/main.js"></script>
-	</body>
+    <footer
+      class="flex flex-col justify-between gap-8 bg-black px-4 py-20 text-white dark:text-neutral-300 md:flex-row md:gap-0 md:px-12"
+    >
+      <div class="flex flex-col">
+        <h4 class="text-xl font-black uppercase tracking-widest">The Hien</h4>
+        <q class="text-lightGray mt-4 block text-sm">
+          <i>Spiders are the only web developers that enjoy finding bugs!</i>
+        </q>
+      </div>
+      <div>
+        <div>
+          <h4 class="text-xl font-black uppercase tracking-widest">Social</h4>
+          <div class="mt-4 flex gap-2">
+            <a href="https://github.com/Yamsunsee" target="_blank">
+              <ion-icon name="logo-github" class="text-xl"></ion-icon>
+            </a>
+            <a href="https://www.facebook.com/phamthehien0410" target="_blank">
+              <ion-icon name="logo-facebook" class="text-xl"></ion-icon>
+            </a>
+          </div>
+        </div>
+        <div class="mt-8">
+          <h4 class="text-xl font-black uppercase tracking-widest">Special thanks</h4>
+          <div class="mt-4 flex gap-2" title="">
+            <a href="https://www.facebook.com/momoko8794" target="_blank">
+              <ion-icon name="image" class="text-xl"></ion-icon>
+            </a>
+            <a href="https://www.rammaheshwari.com" target="_blank">
+              <ion-icon name="color-palette" class="text-xl"></ion-icon>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./src/scripts/main.js"></script>
+  </body>
 </html>
