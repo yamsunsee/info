@@ -13,6 +13,7 @@
       href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;700;900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./src/styles/tagcloud.css" />
     <link rel="stylesheet" href="./src/styles/main.min.css" />
     <title>The Hien</title>
   </head>
@@ -127,48 +128,7 @@
         </div>
         <div>
           <h3 class="text-2xl font-bold">My skills</h3>
-          <div class="text-gray mt-8 flex flex-wrap gap-4 font-bold">
-            <div class="flex h-12 w-fit items-center gap-2 rounded bg-white p-4 dark:bg-neutral-200">
-              <ion-icon name="logo-html5" class="text-red text-2xl"></ion-icon>
-              HTML
-            </div>
-            <div class="flex h-12 w-fit items-center gap-2 rounded bg-white p-4 dark:bg-neutral-200">
-              <img src="./src/images/pug.svg" alt="pug" class="w-6" />
-              Pug
-            </div>
-            <div class="flex h-12 w-fit items-center gap-2 rounded bg-white p-4 dark:bg-neutral-200">
-              <ion-icon name="logo-css3" class="text-blue text-2xl"></ion-icon>
-              CSS
-            </div>
-            <div class="flex h-12 w-fit items-center gap-2 rounded bg-white p-4 dark:bg-neutral-200">
-              <ion-icon name="logo-sass" class="text-purple text-2xl"></ion-icon>
-              Sass
-            </div>
-            <div class="flex h-12 w-fit items-center gap-2 rounded bg-white p-4 dark:bg-neutral-200">
-              <img src="./src/images/tailwind.svg" alt="tailwindcss" class="w-6" />
-              TailwindCSS
-            </div>
-            <div class="flex h-12 w-fit items-center gap-2 rounded bg-white p-4 dark:bg-neutral-200">
-              <ion-icon name="logo-javascript" class="text-yellow text-2xl"></ion-icon>
-              JavaScript
-            </div>
-            <div class="flex h-12 w-fit items-center gap-2 rounded bg-white p-4 dark:bg-neutral-200">
-              <img src="./src/images/vue.svg" alt="vuejs" class="w-6" />
-              VueJS
-            </div>
-            <div class="flex h-12 w-fit items-center gap-2 rounded bg-white p-4 dark:bg-neutral-200">
-              <ion-icon name="logo-react" class="text-lightBlue text-2xl"></ion-icon>
-              ReactJS
-            </div>
-            <div class="flex h-12 w-fit items-center gap-2 rounded bg-white p-4 dark:bg-neutral-200">
-              <img src="./src/images/python.svg" alt="python" class="w-6" />
-              Python
-            </div>
-            <div class="flex h-12 w-fit items-center gap-2 rounded bg-white p-4 dark:bg-neutral-200">
-              <img src="./src/images/git.svg" alt="git" class="w-6" />
-              Git
-            </div>
-          </div>
+          <div class="skills"></div>
         </div>
       </div>
     </section>
@@ -187,7 +147,7 @@
             <h3 class="flex flex-col text-2xl font-bold uppercase md:flex-row md:items-center md:justify-between">
               <div class="order-2 md:order-1">Yamonus</div>
               <div class="order-1 mb-4 flex items-center gap-2 self-end md:order-2 md:mb-0 md:self-center">
-                <img src="./src/images/vue.svg" alt="vue" class="inline-flex w-6" />
+                <img src="./src/images/vue.png" alt="vue" class="inline-flex w-6" />
                 <ion-icon name="logo-sass" class="text-purple text-2xl"></ion-icon>
               </div>
             </h3>
@@ -215,7 +175,7 @@
               <div class="order-2 md:order-1">Yamemorize</div>
               <div class="order-1 mb-4 flex items-center gap-2 self-end md:order-2 md:mb-0 md:self-center">
                 <ion-icon name="logo-react" class="text-lightBlue text-2xl"></ion-icon>
-                <img src="./src/images/tailwind.svg" alt="tailwindcss" class="inline-flex w-6" />
+                <img src="./src/images/tailwind.png" alt="tailwindcss" class="inline-flex w-6" />
               </div>
             </h3>
             <div class="text-gray text-xs font-bold uppercase tracking-widest">Personal project</div>
@@ -241,8 +201,8 @@
             <h3 class="flex flex-col text-2xl font-bold uppercase md:flex-row md:items-center md:justify-between">
               <div class="order-2 md:order-1">Covid tracker</div>
               <div class="order-1 mb-4 flex items-center gap-2 self-end md:order-2 md:mb-0 md:self-center">
-                <img src="./src/images/vue.svg" alt="vue" class="inline-flex w-6" />
-                <img src="./src/images/tailwind.svg" alt="tailwindcss" class="inline-flex w-6" />
+                <img src="./src/images/vue.png" alt="vue" class="inline-flex w-6" />
+                <img src="./src/images/tailwind.png" alt="tailwindcss" class="inline-flex w-6" />
               </div>
             </h3>
             <div class="text-gray text-xs font-bold uppercase tracking-widest">Personal project</div>
@@ -297,7 +257,7 @@
               <div class="order-2 md:order-1">Midbank</div>
               <div class="order-1 mb-4 flex items-center gap-2 self-end md:order-2 md:mb-0 md:self-center">
                 <ion-icon name="logo-html5" class="text-red text-2xl"></ion-icon>
-                <img src="./src/images/tailwind.svg" alt="tailwindcss" class="inline-flex w-6" />
+                <img src="./src/images/tailwind.png" alt="tailwindcss" class="inline-flex w-6" />
                 <ion-icon name="logo-javascript" class="text-yellow text-2xl"></ion-icon>
               </div>
             </h3>
@@ -324,7 +284,7 @@
             <h3 class="flex flex-col text-2xl font-bold uppercase md:flex-row md:items-center md:justify-between">
               <div class="order-2 md:order-1">Food Delivery</div>
               <div class="order-1 mb-4 flex items-center gap-2 self-end md:order-2 md:mb-0 md:self-center">
-                <img src="./src/images/pug.svg" alt="pug" class="inline-flex w-6" />
+                <img src="./src/images/pug.png" alt="pug" class="inline-flex w-6" />
                 <ion-icon name="logo-sass" class="text-purple text-2xl"></ion-icon>
                 <ion-icon name="logo-javascript" class="text-yellow text-2xl"></ion-icon>
               </div>
@@ -453,6 +413,7 @@
         </div>
       </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"></script>
     <script src="./src/scripts/main.js"></script>
   </body>
 </html>

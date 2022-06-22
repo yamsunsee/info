@@ -203,3 +203,12 @@ inputList.forEach((input) => {
     validate(input, input.type)
   }
 })
+
+// Animated Text Sphere
+const tagCloud = TagCloud(".skills", Array(10).fill(""), {
+  radius: 200,
+  maxSpeed: "fast",
+  initSpeed: "medium",
+  direction: 45,
+  keep: true,
+})
