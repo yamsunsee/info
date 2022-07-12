@@ -207,8 +207,22 @@ inputList.forEach((input) => {
 // Animated Text Sphere
 const tagCloud = TagCloud(".skills", Array(10).fill(""), {
   radius: 200,
-  maxSpeed: "fast",
-  initSpeed: "medium",
+  maxSpeed: "medium",
+  initSpeed: "slow",
   direction: 45,
   keep: true,
 })
+
+// Loading
+const loading = document.querySelector("#loading")
+
+window.addEventListener("load", (event) => {
+  const image = document.querySelector("img")
+  const isLoaded = image.complete && image.naturalHeight !== 0
+  if (isLoaded) {
+    loading.style.display = "none"
+  }
+})
+
+// AOS
+AOS.init()

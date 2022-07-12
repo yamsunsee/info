@@ -15,14 +15,20 @@
     />
     <link rel="stylesheet" href="./src/styles/tagcloud.css" />
     <link rel="stylesheet" href="./src/styles/main.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <title>The Hien</title>
   </head>
-  <body
-    class="font-main text-darkGray select-none transition duration-300 ease-out dark:bg-neutral-900 dark:text-neutral-300"
-  >
+  <body class="font-main text-darkGray transition duration-300 ease-out dark:bg-neutral-900 dark:text-neutral-300">
+    <div
+      id="loading"
+      class="fixed top-0 z-50 flex h-screen w-full items-center justify-center bg-white dark:bg-neutral-900"
+    >
+      <img src="./src/images/loading.svg" alt="loading" />
+    </div>
+
     <header
       style="--value: 0%"
-      class="scrollbar sticky top-0 z-10 flex items-center justify-between bg-white px-4 py-4 font-black shadow dark:bg-neutral-900 md:px-12"
+      class="scrollbar sticky top-0 z-40 flex items-center justify-between bg-white px-4 py-4 font-black shadow dark:bg-neutral-900 md:px-12"
     >
       <a href="https://yamsunsee.github.io/info" class="group flex items-center gap-4">
         <div class="aspect-square w-12">
@@ -108,25 +114,38 @@
         >
       </div>
       <div class="mt-20 grid grid-cols-1 gap-20 lg:grid-cols-2">
-        <div>
+        <div data-aos="zoom-in-up">
           <h3 class="text-2xl font-bold">Get to know me!</h3>
           <p class="mt-8">
-            I am a <strong>self-taught front-end developer </strong> with experience
+            I am a <strong>self-taught</strong> Front-end Developer with experience
             <strong>converting designs</strong> (PSD, AI, Figma,...) to HTML, CSS, and JavaScript.
           </p>
           <p class="mt-4">
             Besides, I have experience in <strong>VueJS</strong> with some libraries such as
             <strong>Vuex, Vue Router</strong>.
           </p>
-          <a
-            href="#contact"
-            title="Please feel free to contact me!"
-            class="bg-theme dark:bg-themeDark mt-8 block rounded px-12 py-4 text-center font-black uppercase tracking-widest text-white hover:shadow-2xl dark:text-neutral-300 md:w-fit"
-          >
-            Contact
-          </a>
+          <p class="mt-4">
+            Moreover, I am learning other technologies like <strong>MERN Stack</strong> (Mongoose, Express, React and
+            NodeJS) to prepare for work.
+          </p>
+          <div class="mt-8 flex flex-col gap-4 lg:flex-row">
+            <a
+              class="bg-theme dark:bg-themeDark flex items-center justify-center rounded px-8 py-4 text-center font-black uppercase tracking-widest text-white hover:shadow-2xl dark:text-neutral-300 lg:w-fit xl:px-12 xl:py-4"
+              href="#contact"
+              target="_blank"
+            >
+              Contact
+            </a>
+            <a
+              class="border-gray text-gray flex items-center justify-center rounded border-2 bg-white px-8 py-4 text-center font-black uppercase tracking-widest hover:shadow-2xl dark:border-neutral-900 dark:bg-neutral-900 dark:text-neutral-300 lg:w-fit xl:px-12 xl:py-4"
+              href="https://drive.google.com/file/d/1hIDZrrR6TM7ScHo75XzCsGrJ33mq9dAY/view?usp=sharing"
+              target="_blank"
+            >
+              Download CV
+            </a>
+          </div>
         </div>
-        <div>
+        <div data-aos="zoom-in-up">
           <h3 class="text-2xl font-bold">My skills</h3>
           <div class="skills"></div>
         </div>
@@ -140,10 +159,10 @@
       </div>
       <div class="mt-20 flex flex-col gap-20">
         <div class="grid grid-cols-1 items-center gap-2 md:grid-cols-2 md:gap-20">
-          <div class="md:order-2">
-            <img src="https://source.unsplash.com/random/800x400" alt="project review" />
+          <div data-aos="zoom-in-up" class="overflow-hidden rounded-lg shadow-2xl md:order-2">
+            <img src="./src/images/yamonus.png" alt="project review" />
           </div>
-          <div class="md:order-1">
+          <div data-aos="zoom-in-up" class="md:order-1">
             <h3 class="flex flex-col text-2xl font-bold uppercase md:flex-row md:items-center md:justify-between">
               <div class="order-2 md:order-1">Yamonus</div>
               <div class="order-1 mb-4 flex items-center gap-2 self-end md:order-2 md:mb-0 md:self-center">
@@ -153,24 +172,32 @@
             </h3>
             <div class="text-gray text-xs font-bold uppercase tracking-widest">Personal project</div>
             <p class="mt-8">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo quasi iste sit. Aliquam porro aut ducimus,
-              corrupti consectetur nulla? Explicabo labore quidem quo, consectetur exercitationem qui ab aliquid vel
-              earum!
+              A website for task planning and management, with break time notifications, visual display of work
+              performance statistics, and deadlines on a calendar, focusing on drag-and-drop interaction.
             </p>
-            <a
-              class="bg-theme dark:bg-themeDark mt-8 block rounded px-12 py-4 text-center font-black uppercase tracking-widest text-white hover:shadow-2xl dark:text-neutral-300 md:w-fit"
-              href="https://yamsunsee.github.io/yamonus"
-              target="_blank"
-            >
-              View demo
-            </a>
+            <div class="mt-8 flex flex-col gap-4 lg:flex-row">
+              <a
+                class="bg-theme dark:bg-themeDark flex items-center justify-center rounded px-8 py-4 text-center font-black uppercase tracking-widest text-white hover:shadow-2xl dark:text-neutral-300 lg:w-fit xl:px-12 xl:py-4"
+                href="https://yamsunsee.github.io/yamonus"
+                target="_blank"
+              >
+                View demo
+              </a>
+              <a
+                class="border-gray text-gray flex items-center justify-center rounded border-2 bg-white px-8 py-4 text-center font-black uppercase tracking-widest hover:shadow-2xl dark:border-neutral-800 dark:bg-neutral-800 dark:text-neutral-300 lg:w-fit xl:px-12 xl:py-4"
+                href="https://github.com/yamsunsee/yamonus"
+                target="_blank"
+              >
+                Source code
+              </a>
+            </div>
           </div>
         </div>
         <div class="grid grid-cols-1 items-center gap-2 md:grid-cols-2 md:gap-20">
-          <div>
-            <img src="https://source.unsplash.com/random/800x400" alt="project review" />
+          <div data-aos="zoom-in-up" class="overflow-hidden rounded-lg shadow-2xl">
+            <img src="./src/images/yamemorize.png" alt="project review" />
           </div>
-          <div>
+          <div data-aos="zoom-in-up">
             <h3 class="flex flex-col text-2xl font-bold uppercase md:flex-row md:items-center md:justify-between">
               <div class="order-2 md:order-1">Yamemorize</div>
               <div class="order-1 mb-4 flex items-center gap-2 self-end md:order-2 md:mb-0 md:self-center">
@@ -180,24 +207,32 @@
             </h3>
             <div class="text-gray text-xs font-bold uppercase tracking-widest">Personal project</div>
             <p class="mt-8">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo quasi iste sit. Aliquam porro aut ducimus,
-              corrupti consectetur nulla? Explicabo labore quidem quo, consectetur exercitationem qui ab aliquid vel
-              earum!
+              A flashcard generator, converting data from Google Sheets in a prescribed pattern into vocabulary cards
+              and exercises to learn vocabulary and check results more easily.
             </p>
-            <a
-              class="bg-theme dark:bg-themeDark mt-8 block rounded px-12 py-4 text-center font-black uppercase tracking-widest text-white hover:shadow-2xl dark:text-neutral-300 md:w-fit"
-              href="https://yamsunsee.github.io/yamemorize"
-              target="_blank"
-            >
-              View demo
-            </a>
+            <div class="mt-8 flex flex-col gap-4 lg:flex-row">
+              <a
+                class="bg-theme dark:bg-themeDark flex items-center justify-center rounded px-8 py-4 text-center font-black uppercase tracking-widest text-white hover:shadow-2xl dark:text-neutral-300 lg:w-fit xl:px-12 xl:py-4"
+                href="https://yamsunsee.github.io/yamemorize"
+                target="_blank"
+              >
+                View demo
+              </a>
+              <a
+                class="border-gray text-gray flex items-center justify-center rounded border-2 bg-white px-8 py-4 text-center font-black uppercase tracking-widest hover:shadow-2xl dark:border-neutral-800 dark:bg-neutral-800 dark:text-neutral-300 lg:w-fit xl:px-12 xl:py-4"
+                href="https://github.com/yamsunsee/yamemorize"
+                target="_blank"
+              >
+                Source code
+              </a>
+            </div>
           </div>
         </div>
         <div class="grid grid-cols-1 items-center gap-2 md:grid-cols-2 md:gap-20">
-          <div class="md:order-2">
-            <img src="https://source.unsplash.com/random/800x400" alt="project review" />
+          <div data-aos="zoom-in-up" class="overflow-hidden rounded-lg shadow-2xl md:order-2">
+            <img src="./src/images/covidtracker.png" alt="project review" />
           </div>
-          <div class="md:order-1">
+          <div data-aos="zoom-in-up" class="md:order-1">
             <h3 class="flex flex-col text-2xl font-bold uppercase md:flex-row md:items-center md:justify-between">
               <div class="order-2 md:order-1">Covid tracker</div>
               <div class="order-1 mb-4 flex items-center gap-2 self-end md:order-2 md:mb-0 md:self-center">
@@ -207,24 +242,32 @@
             </h3>
             <div class="text-gray text-xs font-bold uppercase tracking-widest">Personal project</div>
             <p class="mt-8">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo quasi iste sit. Aliquam porro aut ducimus,
-              corrupti consectetur nulla? Explicabo labore quidem quo, consectetur exercitationem qui ab aliquid vel
-              earum!
+              A COVID-19 tracking website, converting data from the API into a chart and tables for easy tracking and
+              comparison. It provides pandemic information by provinces, Vietnam, and the world.
             </p>
-            <a
-              class="bg-theme dark:bg-themeDark mt-8 block rounded px-12 py-4 text-center font-black uppercase tracking-widest text-white hover:shadow-2xl dark:text-neutral-300 md:w-fit"
-              href="https://yamsunsee.github.io/covidtracker/"
-              target="_blank"
-            >
-              View demo
-            </a>
+            <div class="mt-8 flex flex-col gap-4 lg:flex-row">
+              <a
+                class="bg-theme dark:bg-themeDark flex items-center justify-center rounded px-8 py-4 text-center font-black uppercase tracking-widest text-white hover:shadow-2xl dark:text-neutral-300 lg:w-fit xl:px-12 xl:py-4"
+                href="https://yamsunsee.github.io/covidtracker"
+                target="_blank"
+              >
+                View demo
+              </a>
+              <a
+                class="border-gray text-gray flex items-center justify-center rounded border-2 bg-white px-8 py-4 text-center font-black uppercase tracking-widest hover:shadow-2xl dark:border-neutral-800 dark:bg-neutral-800 dark:text-neutral-300 lg:w-fit xl:px-12 xl:py-4"
+                href="https://github.com/yamsunsee/covidtracker"
+                target="_blank"
+              >
+                Source code
+              </a>
+            </div>
           </div>
         </div>
         <div class="grid grid-cols-1 items-center gap-2 md:grid-cols-2 md:gap-20">
-          <div>
-            <img src="https://source.unsplash.com/random/800x400" alt="project review" />
+          <div data-aos="zoom-in-up" class="overflow-hidden rounded-lg shadow-2xl">
+            <img src="./src/images/blocks.png" alt="project review" />
           </div>
-          <div>
+          <div data-aos="zoom-in-up">
             <h3 class="flex flex-col text-2xl font-bold uppercase md:flex-row md:items-center md:justify-between">
               <div class="order-2 md:order-1">Blocks</div>
               <div class="order-1 mb-4 flex items-center gap-2 self-end md:order-2 md:mb-0 md:self-center">
@@ -235,52 +278,68 @@
             </h3>
             <div class="text-gray text-xs font-bold uppercase tracking-widest">Game</div>
             <p class="mt-8">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo quasi iste sit. Aliquam porro aut ducimus,
-              corrupti consectetur nulla? Explicabo labore quidem quo, consectetur exercitationem qui ab aliquid vel
-              earum!
+              A puzzle game, the goal is to destroy all disabled blocks by creating higher colorful blocks. There are
+              many levels with more grid sizes and more difficult to use effects of blocks.
             </p>
-            <a
-              class="bg-theme dark:bg-themeDark mt-8 block rounded px-12 py-4 text-center font-black uppercase tracking-widest text-white hover:shadow-2xl dark:text-neutral-300 md:w-fit"
-              href="https://yamsunsee.github.io/Blocks/"
-              target="_blank"
-            >
-              Play now
-            </a>
+            <div class="mt-8 flex flex-col gap-4 lg:flex-row">
+              <a
+                class="bg-theme dark:bg-themeDark flex items-center justify-center rounded px-8 py-4 text-center font-black uppercase tracking-widest text-white hover:shadow-2xl dark:text-neutral-300 lg:w-fit xl:px-12 xl:py-4"
+                href="https://yamsunsee.github.io/Blocks"
+                target="_blank"
+              >
+                View demo
+              </a>
+              <a
+                class="border-gray text-gray flex items-center justify-center rounded border-2 bg-white px-8 py-4 text-center font-black uppercase tracking-widest hover:shadow-2xl dark:border-neutral-800 dark:bg-neutral-800 dark:text-neutral-300 lg:w-fit xl:px-12 xl:py-4"
+                href="https://github.com/yamsunsee/Blocks"
+                target="_blank"
+              >
+                Source code
+              </a>
+            </div>
           </div>
         </div>
         <div class="grid grid-cols-1 items-center gap-2 md:grid-cols-2 md:gap-20">
-          <div class="md:order-2">
-            <img src="https://source.unsplash.com/random/800x400" alt="project review" />
+          <div data-aos="zoom-in-up" class="overflow-hidden rounded-lg shadow-2xl md:order-2">
+            <img src="./src/images/yameal.png" alt="project review" />
           </div>
-          <div class="md:order-1">
+          <div data-aos="zoom-in-up" class="md:order-1">
             <h3 class="flex flex-col text-2xl font-bold uppercase md:flex-row md:items-center md:justify-between">
-              <div class="order-2 md:order-1">Midbank</div>
+              <div class="order-2 md:order-1">Yameal</div>
               <div class="order-1 mb-4 flex items-center gap-2 self-end md:order-2 md:mb-0 md:self-center">
-                <ion-icon name="logo-html5" class="text-red text-2xl"></ion-icon>
+                <img src="./src/images/pug.png" alt="pug" class="inline-flex w-6" />
                 <img src="./src/images/tailwind.png" alt="tailwindcss" class="inline-flex w-6" />
                 <ion-icon name="logo-javascript" class="text-yellow text-2xl"></ion-icon>
               </div>
             </h3>
             <div class="text-gray text-xs font-bold uppercase tracking-widest">Landing page</div>
             <p class="mt-8">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo quasi iste sit. Aliquam porro aut ducimus,
-              corrupti consectetur nulla? Explicabo labore quidem quo, consectetur exercitationem qui ab aliquid vel
-              earum!
+              A food delivery landing page, focusing on the slider and responsive on many devices, trying a combination
+              of Pug and TailwindCSS to reuse components.
             </p>
-            <a
-              class="bg-theme dark:bg-themeDark mt-8 block rounded px-12 py-4 text-center font-black uppercase tracking-widest text-white hover:shadow-2xl dark:text-neutral-300 md:w-fit"
-              href="https://yamsunsee.github.io/Midbank/"
-              target="_blank"
-            >
-              View demo
-            </a>
+            <div class="mt-8 flex flex-col gap-4 lg:flex-row">
+              <a
+                class="bg-theme dark:bg-themeDark flex items-center justify-center rounded px-8 py-4 text-center font-black uppercase tracking-widest text-white hover:shadow-2xl dark:text-neutral-300 lg:w-fit xl:px-12 xl:py-4"
+                href="https://yamsunsee.github.io/yameal"
+                target="_blank"
+              >
+                View demo
+              </a>
+              <a
+                class="border-gray text-gray flex items-center justify-center rounded border-2 bg-white px-8 py-4 text-center font-black uppercase tracking-widest hover:shadow-2xl dark:border-neutral-800 dark:bg-neutral-800 dark:text-neutral-300 lg:w-fit xl:px-12 xl:py-4"
+                href="https://github.com/yamsunsee/yameal"
+                target="_blank"
+              >
+                Source code
+              </a>
+            </div>
           </div>
         </div>
         <div class="grid grid-cols-1 items-center gap-2 md:grid-cols-2 md:gap-20">
-          <div>
-            <img src="https://source.unsplash.com/random/800x400" alt="project review" />
+          <div data-aos="zoom-in-up" class="overflow-hidden rounded-lg shadow-2xl">
+            <img src="./src/images/fooddelivery.png" alt="project review" />
           </div>
-          <div>
+          <div data-aos="zoom-in-up">
             <h3 class="flex flex-col text-2xl font-bold uppercase md:flex-row md:items-center md:justify-between">
               <div class="order-2 md:order-1">Food Delivery</div>
               <div class="order-1 mb-4 flex items-center gap-2 self-end md:order-2 md:mb-0 md:self-center">
@@ -291,17 +350,61 @@
             </h3>
             <div class="text-gray text-xs font-bold uppercase tracking-widest">Landing page</div>
             <p class="mt-8">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo quasi iste sit. Aliquam porro aut ducimus,
-              corrupti consectetur nulla? Explicabo labore quidem quo, consectetur exercitationem qui ab aliquid vel
-              earum!
+              Another food delivery landing page, trying out Pug, the HTML preprocessor, and learning how to split the
+              file for easy editing and maintenance.
             </p>
-            <a
-              class="bg-theme dark:bg-themeDark mt-8 block rounded px-12 py-4 text-center font-black uppercase tracking-widest text-white hover:shadow-2xl dark:text-neutral-300 md:w-fit"
-              href="https://yamsunsee.github.io/FoodDelivery/"
-              target="_blank"
-            >
-              View demo
-            </a>
+            <div class="mt-8 flex flex-col gap-4 lg:flex-row">
+              <a
+                class="bg-theme dark:bg-themeDark flex items-center justify-center rounded px-8 py-4 text-center font-black uppercase tracking-widest text-white hover:shadow-2xl dark:text-neutral-300 lg:w-fit xl:px-12 xl:py-4"
+                href="https://yamsunsee.github.io/FoodDelivery"
+                target="_blank"
+              >
+                View demo
+              </a>
+              <a
+                class="border-gray text-gray flex items-center justify-center rounded border-2 bg-white px-8 py-4 text-center font-black uppercase tracking-widest hover:shadow-2xl dark:border-neutral-800 dark:bg-neutral-800 dark:text-neutral-300 lg:w-fit xl:px-12 xl:py-4"
+                href="https://github.com/yamsunsee/FoodDelivery"
+                target="_blank"
+              >
+                Source code
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 items-center gap-2 md:grid-cols-2 md:gap-20">
+          <div data-aos="zoom-in-up" class="overflow-hidden rounded-lg shadow-2xl md:order-2">
+            <img src="./src/images/midbank.png" alt="project review" />
+          </div>
+          <div data-aos="zoom-in-up" class="md:order-1">
+            <h3 class="flex flex-col text-2xl font-bold uppercase md:flex-row md:items-center md:justify-between">
+              <div class="order-2 md:order-1">Midbank</div>
+              <div class="order-1 mb-4 flex items-center gap-2 self-end md:order-2 md:mb-0 md:self-center">
+                <ion-icon name="logo-html5" class="text-red text-2xl"></ion-icon>
+                <img src="./src/images/tailwind.png" alt="tailwindcss" class="inline-flex w-6" />
+                <ion-icon name="logo-javascript" class="text-yellow text-2xl"></ion-icon>
+              </div>
+            </h3>
+            <div class="text-gray text-xs font-bold uppercase tracking-widest">Landing page</div>
+            <p class="mt-8">
+              A banking landing page, trying out TailwindCSS, a utility-first CSS framework packed with classes, and a
+              convenience tool to make responsive on multiple display sizes with inline classes.
+            </p>
+            <div class="mt-8 flex flex-col gap-4 lg:flex-row">
+              <a
+                class="bg-theme dark:bg-themeDark flex items-center justify-center rounded px-8 py-4 text-center font-black uppercase tracking-widest text-white hover:shadow-2xl dark:text-neutral-300 lg:w-fit xl:px-12 xl:py-4"
+                href="https://yamsunsee.github.io/Midbank"
+                target="_blank"
+              >
+                View demo
+              </a>
+              <a
+                class="border-gray text-gray flex items-center justify-center rounded border-2 bg-white px-8 py-4 text-center font-black uppercase tracking-widest hover:shadow-2xl dark:border-neutral-800 dark:bg-neutral-800 dark:text-neutral-300 lg:w-fit xl:px-12 xl:py-4"
+                href="https://github.com/yamsunsee/Midbank"
+                target="_blank"
+              >
+                Source code
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -322,6 +425,7 @@
         >
       </div>
       <div
+        data-aos="zoom-in-up"
         id="form"
         class="mt-20 flex w-full flex-col gap-4 rounded bg-white p-4 transition duration-300 ease-out dark:bg-neutral-800 sm:gap-8 sm:p-8 md:w-3/4 lg:p-12"
       >
@@ -414,6 +518,7 @@
       </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./src/scripts/main.js"></script>
   </body>
 </html>
