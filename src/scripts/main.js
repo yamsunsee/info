@@ -1,16 +1,16 @@
 // Loading
 const loading = document.querySelector("#loading")
 const start = Date.now()
-const duration = 2
 
 window.addEventListener("load", (event) => {
   const image = document.querySelector("img")
   const isLoaded = image.complete && image.naturalHeight !== 0
   if (isLoaded) {
-    const millis = Date.now() - start
+    const milliseconds = Date.now() - start
+    const duration = Math.max(0, 2000 - milliseconds)
     setTimeout(() => {
       loading.style.display = "none"
-    }, duration * 1000 - millis)
+    }, duration)
   }
 })
 
