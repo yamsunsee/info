@@ -1,3 +1,19 @@
+// Loading
+const loading = document.querySelector("#loading")
+const start = Date.now()
+const duration = 2
+
+window.addEventListener("load", (event) => {
+  const image = document.querySelector("img")
+  const isLoaded = image.complete && image.naturalHeight !== 0
+  if (isLoaded) {
+    const millis = Date.now() - start
+    setTimeout(() => {
+      loading.style.display = "none"
+    }, duration * 1000 - millis)
+  }
+})
+
 // Menu
 const menu = document.querySelector(".menu")
 const nav = document.querySelector("nav")
@@ -211,17 +227,6 @@ const tagCloud = TagCloud(".skills", Array(10).fill(""), {
   initSpeed: "slow",
   direction: 45,
   keep: true,
-})
-
-// Loading
-const loading = document.querySelector("#loading")
-
-window.addEventListener("load", (event) => {
-  const image = document.querySelector("img")
-  const isLoaded = image.complete && image.naturalHeight !== 0
-  if (isLoaded) {
-    loading.style.display = "none"
-  }
 })
 
 // AOS
