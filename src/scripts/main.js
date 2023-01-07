@@ -1,18 +1,17 @@
 // Loading
-const loading = document.querySelector("#loading")
-const start = Date.now()
+const loading = document.querySelector("#loading");
 
-window.addEventListener("load", (event) => {
-  const image = document.querySelector("img")
-  const isLoaded = image.complete && image.naturalHeight !== 0
-  if (isLoaded) {
-    const milliseconds = Date.now() - start
-    const duration = Math.max(0, 2000 - milliseconds)
+window.addEventListener("load", () => {
+  const isVisited = JSON.parse(localStorage.getItem("yamdev"));
+  if (isVisited) {
+    loading.style.display = "none";
+  } else {
+    localStorage.setItem("yamdev", JSON.stringify(true));
     setTimeout(() => {
-      loading.style.display = "none"
-    }, duration)
+      loading.style.display = "none";
+    }, 2000);
   }
-})
+});
 
 // Menu
 const menu = document.querySelector(".menu")
