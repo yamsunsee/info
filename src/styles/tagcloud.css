@@ -322,7 +322,7 @@ html.dark .tagcloud--item:nth-child(2):hover::before {
 }
 
 .tagcloud--item:nth-child(9)::before {
-  content: "Python";
+  content: "NodeJS";
   color: #777777;
   position: absolute;
   top: 50%;
@@ -335,7 +335,7 @@ html.dark .tagcloud--item:nth-child(2):hover::before {
   content: "";
   width: 50%;
   height: 50%;
-  background: center/contain url(../images/python.png) no-repeat;
+  background: center/contain url(../images/nodejs.png) no-repeat;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -344,12 +344,7 @@ html.dark .tagcloud--item:nth-child(2):hover::before {
 }
 
 .tagcloud--item:nth-child(9):hover::before {
-  color: #306998;
-  transform: translate(-50%, -2rem);
-}
-
-html.dark .tagcloud--item:nth-child(9):hover::before {
-  color: #ffe873;
+  color: #5fa04e;
   transform: translate(-50%, -2rem);
 }
 
@@ -365,7 +360,7 @@ html.dark .tagcloud--item:nth-child(9):hover::before {
 }
 
 .tagcloud--item:nth-child(10)::before {
-  content: "Git";
+  content: "Express";
   color: #777777;
   position: absolute;
   top: 50%;
@@ -378,7 +373,7 @@ html.dark .tagcloud--item:nth-child(9):hover::before {
   content: "";
   width: 50%;
   height: 50%;
-  background: center/contain url(../images/git.png) no-repeat;
+  background: center/contain url(../images/express.png) no-repeat;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -387,11 +382,183 @@ html.dark .tagcloud--item:nth-child(9):hover::before {
 }
 
 .tagcloud--item:nth-child(10):hover::before {
-  color: #f03c2e;
+  color: #000;
+  transform: translate(-50%, -2rem);
+}
+
+html.dark .tagcloud--item:nth-child(10):hover::before {
+  color: #fff;
   transform: translate(-50%, -2rem);
 }
 
 .tagcloud--item:nth-child(10):hover::after {
+  transform: translate(-50%, -0.5rem);
+}
+
+.tagcloud--item:nth-child(11) {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.tagcloud--item:nth-child(11)::before {
+  content: "Socket.IO";
+  color: #777777;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 75%);
+  transition: ease-in-out 0.5s;
+}
+
+.tagcloud--item:nth-child(11)::after {
+  content: "";
+  width: 50%;
+  height: 50%;
+  background: center/contain url(../images/socketio.svg) no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -75%);
+  transition: ease-in-out 0.5s;
+}
+
+.tagcloud--item:nth-child(11):hover::before {
+  color: #000;
+  transform: translate(-50%, -2rem);
+}
+
+html.dark .tagcloud--item:nth-child(11):hover::before {
+  color: #fff;
+  transform: translate(-50%, -2rem);
+}
+
+.tagcloud--item:nth-child(11):hover::after {
+  transform: translate(-50%, -0.5rem);
+}
+
+.tagcloud--item:nth-child(12) {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.tagcloud--item:nth-child(12)::before {
+  content: "MongoDB";
+  color: #777777;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 75%);
+  transition: ease-in-out 0.5s;
+}
+
+.tagcloud--item:nth-child(12)::after {
+  content: "";
+  width: 50%;
+  height: 50%;
+  background: center/contain url(../images/mongodb.png) no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -75%);
+  transition: ease-in-out 0.5s;
+}
+
+.tagcloud--item:nth-child(12):hover::before {
+  color: #001e2b;
+  transform: translate(-50%, -2rem);
+}
+
+html.dark .tagcloud--item:nth-child(12):hover::before {
+  color: #00ed64;
+  transform: translate(-50%, -2rem);
+}
+
+.tagcloud--item:nth-child(12):hover::after {
+  transform: translate(-50%, -0.5rem);
+}
+
+.tagcloud--item:nth-child(13) {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.tagcloud--item:nth-child(13)::before {
+  content: "Python";
+  color: #777777;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 75%);
+  transition: ease-in-out 0.5s;
+}
+
+.tagcloud--item:nth-child(13)::after {
+  content: "";
+  width: 50%;
+  height: 50%;
+  background: center/contain url(../images/python.png) no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -75%);
+  transition: ease-in-out 0.5s;
+}
+
+.tagcloud--item:nth-child(13):hover::before {
+  color: #306998;
+  transform: translate(-50%, -2rem);
+}
+
+html.dark .tagcloud--item:nth-child(13):hover::before {
+  color: #ffe873;
+  transform: translate(-50%, -2rem);
+}
+
+.tagcloud--item:nth-child(13):hover::after {
+  transform: translate(-50%, -0.5rem);
+}
+
+.tagcloud--item:nth-child(14) {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.tagcloud--item:nth-child(14)::before {
+  content: "Git";
+  color: #777777;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 75%);
+  transition: ease-in-out 0.5s;
+}
+
+.tagcloud--item:nth-child(14)::after {
+  content: "";
+  width: 50%;
+  height: 50%;
+  background: center/contain url(../images/git.png) no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -75%);
+  transition: ease-in-out 0.5s;
+}
+
+.tagcloud--item:nth-child(14):hover::before {
+  color: #f03c2e;
+  transform: translate(-50%, -2rem);
+}
+
+.tagcloud--item:nth-child(14):hover::after {
   transform: translate(-50%, -0.5rem);
 }
 
